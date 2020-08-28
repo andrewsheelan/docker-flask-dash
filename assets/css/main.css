@@ -1,0 +1,25 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* needed for container min-height */
+}
+div.container {
+  position: relative; /* needed for footer positioning*/
+  height: auto !important; /* real browsers */
+  min-height: 100%; /* real browsers */
+  border: 1px solid #eee;
+}
+div.header {
+  padding: 1em;
+  background: #efe;
+}
+div.content {
+  /* padding:1em 1em 5em; *//* bottom padding for footer */
+}
+div.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0; /* stick to bottom */
+  background: #ddd;
+}

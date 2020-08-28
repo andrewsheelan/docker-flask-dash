@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  web:
+    restart: always
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - '.:/app'
+    env_file:
+      - .env
+    command: /usr/local/bin/gunicorn -w 2 -b :8000 app:server
+
+volumes:
+  db-data:
+  web-data:
